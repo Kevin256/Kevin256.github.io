@@ -33,9 +33,9 @@ home = ["HTML", "RSS", "Algolia"]
 
   # algolia site search
   algolia_search = true
-  algolia_appId = ""
-  algolia_indexName = "blog_index"
-  algolia_apiKey = ""
+  algolia_appId = "G4SJNIM5P9"
+  algolia_indexName = "algolia"
+  algolia_apiKey = "738ee935d8ed5060ac06873b2435d6ba"
 
   # Sidebar settings
   sidebar_about_description = "Software Developer, AI Engineer and Life Adventurer"
