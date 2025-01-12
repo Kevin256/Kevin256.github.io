@@ -146,9 +146,9 @@ params = ["categories", "tags"]
 
 [params.giscus]
 data_repo="Kevin256/Kevin256.github.io"
-data_repo_id="R_kgDOM-aRvQ"
+data_repo_id="R_kgDONpZm8w"
 data_category="Announcements"
-data_category_id="DIC_kwDOM-aRvc4ClvEj"
+data_category_id="DIC_kwDONpZm884Cl9Gx"
 data_mapping="pathname"
 data_reactions_enabled="1"
 data_emit_metadata="0"
