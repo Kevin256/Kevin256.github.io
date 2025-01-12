@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="杨子逸">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://Kevin256.github.io//img/home-bg-jeep.jpg">
+    <meta property="twitter:image" content="https://Kevin256.github.io//img/home-bg-jeep.jpg" />
+    
+
+    
+    <meta name="title" content="科技，创新，商业与社会 TIBS  1" />
+    <meta property="og:title" content="科技，创新，商业与社会 TIBS  1" />
+    <meta property="twitter:title" content="科技，创新，商业与社会 TIBS  1" />
+    
+
+    
+    <meta name="description" content="TIBS 课程">
+    <meta property="og:description" content="TIBS 课程" />
+    <meta property="twitter:description" content="TIBS 课程" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="杨子逸, Yang Ziyi 杨子逸的网络日志, 杨子逸的博客, Yang Ziyi Blog, 博客, 个人网站, AI, Artificial Intelligence, Computer Vision, CV, Natural Language Processing, NLP">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>科技，创新，商业与社会 TIBS  1 | 杨子逸的博客 | Yang Ziyi Blog</title>
+
+    <link rel="canonical" href="/post/2025-01-08-build-a-mdfilm/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+            onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});">
+    </script>
+
+</head>
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJW25L51HL"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FJW25L51HL');
+        }
+      </script>
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">杨子逸</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive/">ARCHIVE</a></li>
+                    
+                        <li><a href="/about/">ABOUT</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg-jeep.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/%E7%A7%91%E6%8A%80" title="科技">
+                            科技
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E6%8B%92%E7%BB%9D%E7%82%92%E4%BD%9C" title="拒绝炒作">
+                            拒绝炒作
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E7%82%92%E4%BD%9C%E5%91%A8%E6%9C%9F" title="炒作周期">
+                            炒作周期
+                        </a>
+                        
+                    </div>
+                    <h1>科技，创新，商业与社会 TIBS  1</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;Yang Ziyi&#34;
+                             
+                            on 
+                            Wednesday, January 8, 2025
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="tibs">TIBS</h1>
+<p>TIBS 是一个关于科技，创新，商业和社会 的课程。</p>
+<p>商业、经济、法律和社会背景以及技术创新的影响的广泛基础，重点是当代数据科学从业者应该熟悉的数字、以数据为中心和软件密集型技术。该单元涵盖负责任的创新和开放式创新：结合内部和外部利益相关者的想法，以推动新技术的有益开发。本单元的学生还将在技术创新的法律、管理和财务方面打下基础，以促进知识转移和财富创造。它将特别考虑使用个人数据所涉及的法律、道德和技术问题，并参考《通用数据保护条例》（GDPR） 等框架。为了平衡起见，本单元的学生还参与了质疑或批评新技术的一般社会和社会影响的文献，特别是数字/以数据为中心的技术，如人工智能、高级自动化、对公民的国家监控和主要跨国公司所实行的“监控资本主义”。
+下面从四个方面来解释</p>
+<h1 id="拒绝炒作-dont-believe-the-hype">拒绝炒作 （Don&rsquo;t Believe the Hype）</h1>
+<p>1.光环效应 The Halo effect：</p>
+<ul>
+<li>光环效应 关注公司的整体表现并归因其文化、领导力、价值观等的趋势。事实上，我们通常声称推动公司绩效的许多因素只是基于先前绩效的归因。</li>
+<li>相关性和因果关系的妄想 有两件事可能相关，但我们可能不知道哪一个导致了哪一个。员工满意度会带来高绩效吗？证据表明，这主要是相反的——公司的成功对员工满意度有很大影响。</li>
+<li>单一解释的妄想 许多研究表明，一个特定的因素——强大的公司文化或以客户为中心或领导力——会导致绩效的提高。但是，由于其中许多因素是高度相关的，因此每个因素的影响通常小于建议的。</li>
+<li>连接胜利点的妄想如果我们挑选一堆成功的公司并寻找它们的共同点，我们永远不会孤立它们成功的原因，因为我们无法将它们与不太成功的公司进行比较。</li>
+<li>严谨研究的错觉 如果数据质量不好，那么我们收集了多少或研究方法看起来多么复杂都无关紧要。</li>
+<li>持久成功的错觉 几乎所有高绩效公司都会随着时间的推移而退步。持久成功蓝图的承诺很有吸引力，但并不现实。</li>
+<li>绝对业绩的错觉 公司业绩是相对的，而不是绝对的。一家公司可以同时改进并进一步落后于竞争对手。</li>
+<li>大棒错误端的错觉成功的公司经常追求高度集中的战略可能是真的，但这并不意味着高度集中的战略往往会带来成功。</li>
+<li>组织物理学的错觉 公司绩效不遵守不变的自然法则，也无法用科学的准确性进行预测——尽管我们渴望确定性和秩序。
+wise managers know that business is about finding ways to improve the odds of success—but never imagining that success is certain.
+<strong>明智的管理者知道，企业就是想方设法提高成功几率，但从不认为成功是必然的。</strong></li>
+</ul>
+<h1 id="高德纳炒作周期gartner-hype-cycle">高德纳炒作周期（Gartner Hype Cycle）</h1>
+<p>
+  <img src="/img/TIBS/GHC.png" alt="Gartner Hype Cycle">
+
+</p>
+<ul>
+<li>
+<ol>
+<li>技术萌芽期（Technology Trigger）：新技术的出现或某个突破性的发现开始吸引公众和媒体的关注。此时实际应用案例较少，但技术的潜力被广泛讨论。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>期望膨胀顶峰（Peak of Inflated Expectations）：由于大量的媒体报道和市场炒作，技术的期望值达到顶峰，很多企业和投资者对其前景抱有极高的期待。</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>幻灭低谷（Trough of Disillusionment）：随着时间推移，实际应用中遇到的问题开始显现，初期的高期望值逐渐降温，很多企业开始意识到技术的局限性，投资和兴趣逐渐减少。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>复苏坡道（Slope of Enlightenment）：技术开始稳步进展，逐渐得到改进和优化，企业对其应用有了更加现实的期望，真正的成功案例开始出现。</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>生产力平台（Plateau of Productivity）：技术逐渐成熟，进入广泛应用阶段，市场对其接受度增加，技术开始为企业和用户带来实际的生产力和效益。</li>
+</ol>
+</li>
+</ul>
+<h1 id="现时中的炒作">现时中的炒作</h1>
+<p>在科幻中的炒作，例如在电影情节或者科幻小说中，不切实际，毫无科学依据的想法，会在如今的流媒体上进行炒作，误导大众基本的科学观念。</p>
+<ul>
+<li>1.避免数据操控与“P-hacking”： 书中讲述了科学界对P值的滥用（即“P-hacking”），这是一种“炒作”研究结果的做法，研究者通过选择性地报告有统计意义的结果来抬高研究的吸引力。而这种做法直接违反了科学严谨性，造成了不真实的科研成果。类似地，图像篡改、数据伪造等行为也可以被看作是科学炒作的表现，这些做法不仅影响了研究的真实性，还伤害了公众对科学的信任。</li>
+<li>2.抵制过度简化和伪科学的推广： 书中提到，某些“炫目”但缺乏实证支持的研究（如“Power Posing”、隐性联想测试等）被媒体和公众过度炒作，成为流行的理论或现象。这些现象可能没有足够的科学证据支持，但通过夸大其意义，迅速获得了广泛关注，最终导致误导公众。科学的责任是寻找和验证真理，而非通过炒作吸引眼球。</li>
+<li>
+<ol start="3">
+<li>科学出版的“商业化”问题： 书中还讨论了学术出版中的商业化问题，尤其是收费高昂的开放获取期刊，这种做法本质上也是一种炒作：通过控制内容的可得性和收费标准，出版商获得巨大利润，而研究者和公众却不得不为获取科研成果付费。这样一种体系不仅增加了科学研究的成本，也损害了科学的公共性和开放性。</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>对真相的压制与“炒作”利益： Ritchie指出，科学界常常因为政治、社会和经济原因而忽视一些不符合主流观点的研究成果。例如，许多社会科学研究忽视了基因对行为的影响，或者出于避免争议的考虑，不敢深入探讨某些敏感问题。这种对真相的“压制”实际上是另一种形式的炒作，因为它牺牲了科学的客观性和独立性，迎合了公众或特定团体的偏见。</li>
+</ol>
+</li>
+</ul>
+<p>通过避免“炒作”，我们能够恢复科学的严谨性与公众信任，使科学真正为社会和人类的进步贡献力量。</p>
+<h1 id="附录learning-materials-学习资料">附录：Learning Materials 学习资料</h1>
+<p>A written transcript of an interview with Phil Rosenzweig, talking about The Halo Effect (the transcript includes a v brief summary of the book): <a href="https://journals-sagepub-com.bris.idm.oclc.org/doi/pdf/10.1177/1056492609347567">https://journals-sagepub-com.bris.idm.oclc.org/doi/pdf/10.1177/1056492609347567</a></p>
+<p>Gartner&rsquo;s promo video for The Hype Cycle, with pumping music. This will only waste 4m08s of your life: <a href="https://www.youtube.com/watch?v=YDbkY2UoIeo">https://www.youtube.com/watch?v=YDbkY2UoIeo</a></p>
+<p>A critical academic review of The Hype Cycle, published with the benefit of several years of hindsight: O. Dedehayir &amp; M. Steinert (2016) The hype cycle model: A review and future directions. Technological Forecasting &amp; Social Change 108:28-41. Available here: <a href="https://www.sciencedirect.com/science/article/pii/S0040162516300270">https://www.sciencedirect.com/science/article/pii/S0040162516300270</a></p>
+<p>Rosalind Arden&rsquo;s very nice review of Ritchie&rsquo;s Science Fictions in Quilette is here: <a href="https://quillette.com/2020/08/21/science-fictions-review-begone-science-swindlers/">https://quillette.com/2020/08/21/science-fictions-review-begone-science-swindlers/</a></p>
+<p>A 43m conversation between Tom Whipple (Science Editor at The Times) and and Stuart Ritchie, author of Science Fictions, on the Intelligence-Squared podcast: <a href="https://www.youtube.com/watch?v=fOhb3wXFHkM">https://www.youtube.com/watch?v=fOhb3wXFHkM</a></p>
+<p>Bergstrom &amp; West, the authors of Calling Bullshit, have produced a series of 10 lectures, each broken into a sequence of short videos, to accompany their book. The videos are freely available on Youtube: please watch all of them.
+The full set of 10 Lectures, each split into similarly small chunks: <a href="https://www.callingbullshit.org/videos.html">https://www.callingbullshit.org/videos.html</a></p>
+
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p> 「如果这篇文章对你有用,请随意打赏」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://Kevin256.github.io/"><img src="/img/favicon.png" />杨子逸</a></span>
+        
+	        <p class="tip"><i></i><span>如果这篇文章对你有用,请随意打赏</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="/js/reward.js"></script>
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2025-01-04-hugo-quick-start/" data-toggle="tooltip" data-placement="top" title="Hugo Quick Start">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
+                
+<script src="https://giscus.app/client.js"
+        data-repo="Kevin256/Kevin256.github.io"
+        data-repo-id="R_kgDOM-aRvQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOM-aRvc4ClvEj"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+
+<link href="https://xxx.xxx.com/dist/Artalk.css" rel="stylesheet" />
+<script src="https://xxx.xxx.com/dist/Artalk.js"></script>
+
+
+<div id="Comments"></div>
+
+<script>
+    Artalk.init({
+        el: '#Comments',
+        pageKey: 'https:\/\/Kevin256.github.io\/post\/2025-01-08-build-a-mdfilm\/',
+        pageTitle: '科技，创新，商业与社会 TIBS  1',
+        server: 'https:\/\/xxx.xxx.com',
+        site: 'xxx blog',
+    })
+</script>
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="mailto:ziyiyang1216@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    <li>
+                        <a target="_blank" href="/img/favicon1/weichat.jpg">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/Kevin256">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="杨子逸" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; 杨子逸 2025
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
