@@ -15,7 +15,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/home-bg-jeep.jpg"
-  SEOTitle = "杨子逸的博客 | Yang Ziyi Blog"
+  SEOTitle = "子逸的博客 | Yang Ziyi Blog"
   description = "杨子逸, 程序员, 生活探险家 | 这里是 杨子逸 的博客, 与你一起发现更大的世界。"
   keyword = "杨子逸, Yang Ziyi 杨子逸的网络日志, 杨子逸的博客, Yang Ziyi Blog, 博客, 个人网站, AI, Artificial Intelligence, Computer Vision, CV, Natural Language Processing, NLP"
   slogan = "回首向来萧瑟处, 归去, 也无风雨也无晴"
