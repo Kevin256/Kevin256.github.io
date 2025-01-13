@@ -100,9 +100,9 @@ home = ["HTML", "RSS", "Algolia"]
   #xing          = ""
   #git           = "full profile url for git user"
   
-  # [[params.friend_link]]
-  # title = "徐浩的博客"
-  # href =  "https://xiao001010.github.io/"
+  [[params.friend_link]]
+  title = "徐浩的博客"
+  href =  "https://xiao001010.github.io/"
 
   [[params.bookmark_link]]
   title =  "Martin Fowler"
