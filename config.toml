@@ -67,7 +67,7 @@ home = ["HTML", "RSS", "Algolia"]
   reward = true 
   reward_guide = "如果这篇文章对你有用,请随意打赏" 
 
-  friends = false
+  friends = true
   bookmarks = false
   # show my info in the sidebar
   about_me = true
@@ -101,8 +101,8 @@ home = ["HTML", "RSS", "Algolia"]
   #git           = "full profile url for git user"
   
   # [[params.friend_link]]
-  # title = "Linda的博客"
-  # href =  "https://zhaozhihan.com"
+  # title = "徐浩的博客"
+  # href =  "https://xiao001010.github.io/"
 
   [[params.bookmark_link]]
   title =  "Martin Fowler"
